@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Explorer 🌌</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="space-background">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+    </div>
+
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png" 
+                     alt="NASA Logo" 
+                     class="nasa-logo">
+                <h1>Cosmic Explorer</h1>
+            </div>
+            <div class="date-controls">
+                <button class="nav-btn" onclick="previousDay()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <input type="date" id="datePicker">
+                <button class="nav-btn" onclick="nextDay()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Exploring the cosmos...</p>
+            </div>
+
+            <div class="error" id="error"></div>
+
+            <div class="image-container" id="imageContainer">
+                <div class="image-wrapper">
+                    <img class="nasa-image" id="nasaImage" alt="NASA Astronomy Picture of the Day">
+                    <div class="image-overlay">
+                        <h2 class="image-title" id="imageTitle"></h2>
+                        <p class="image-description" id="imageDescription"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <div class="keyboard-hint">
+                <i class="fas fa-keyboard"></i>
+                <span>Use ← → arrow keys to navigate</span>
+            </div>
+            <div class="api-info">
+                Powered by NASA APOD API
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
